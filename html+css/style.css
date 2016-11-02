@@ -1,0 +1,30 @@
+p {
+	color: #40e0d0;
+}
+
+a {
+	color: #bdf4ef;
+	text-decoration: none;
+}
+
+body {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 14px;
+	color: #1dafa1;
+	background-color: black;
+}
+
+h1,h2,h3,h4,h5,h6,hr {
+	color: turquoise;
+	text-align: center; 
+}
+
+h1 {
+	margin-bottom: 0;
+	font-size: 2em;
+}
+
+strong {
+	font-style: bold;
+	font-variant: small-caps;
+}
