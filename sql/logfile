@@ -1,0 +1,16 @@
+< 2016-10-19 00:44:55.588 CDT > FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5432.lock": Permission denied
+< 2016-10-19 00:44:55.588 CDT > LOG:  database system is shut down
+< 2016-10-19 00:56:01.325 CDT > FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5432.lock": Permission denied
+< 2016-10-19 00:56:01.325 CDT > LOG:  database system is shut down
+< 2016-10-19 01:03:16.555 CDT > FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5432.lock": Permission denied
+< 2016-10-19 01:03:16.555 CDT > LOG:  database system is shut down
+< 2016-10-19 01:08:08.665 CDT > FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5432.lock": Permission denied
+< 2016-10-19 01:08:08.665 CDT > LOG:  database system is shut down
+< 2016-10-19 01:23:27.342 CDT > FATAL:  data directory "/home/mntobin/tutorials/sql/data" has group or world access
+< 2016-10-19 01:23:27.342 CDT > DETAIL:  Permissions should be u=rwx (0700).
+< 2016-10-19 01:24:21.642 CDT > FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5432.lock": Permission denied
+< 2016-10-19 01:24:21.643 CDT > LOG:  database system is shut down
+< 2016-10-19 01:26:15.364 CDT > LOG:  redirecting log output to logging collector process
+< 2016-10-19 01:26:15.364 CDT > HINT:  Future log output will appear in directory "pg_log".
+< 2016-10-25 20:15:57.883 CDT > LOG:  redirecting log output to logging collector process
+< 2016-10-25 20:15:57.883 CDT > HINT:  Future log output will appear in directory "pg_log".

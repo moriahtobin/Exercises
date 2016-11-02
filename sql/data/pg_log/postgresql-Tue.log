@@ -1,0 +1,90 @@
+< 2016-10-25 20:15:57.908 CDT > LOG:  database system was shut down at 2016-10-19 02:07:41 CDT
+< 2016-10-25 20:15:58.003 CDT > LOG:  MultiXact member wraparound protections are now enabled
+< 2016-10-25 20:15:58.006 CDT > LOG:  database system is ready to accept connections
+< 2016-10-25 20:15:58.006 CDT > LOG:  autovacuum launcher started
+< 2016-10-25 20:18:37.595 CDT > FATAL:  database "data" does not exist
+< 2016-10-25 20:19:29.800 CDT > FATAL:  database "./data" does not exist
+< 2016-10-25 20:21:36.113 CDT > ERROR:  syntax error at or near "ls" at character 1
+< 2016-10-25 20:21:36.113 CDT > STATEMENT:  ls
+	exit
+	q
+	help
+	SELECT current_date;
+< 2016-10-25 20:22:58.992 CDT > ERROR:  database "mydb" already exists
+< 2016-10-25 20:22:58.992 CDT > STATEMENT:  CREATE DATABASE mydb;
+< 2016-10-25 20:24:41.863 CDT > FATAL:  database "test" does not exist
+< 2016-10-25 20:30:32.983 CDT > ERROR:  syntax error at or near ")" at character 146
+< 2016-10-25 20:30:32.983 CDT > STATEMENT:  CREATE TABLE weather (
+	city       varchar(80),
+	temp_lo    int,           
+	temp_high  int,           
+	prcp       real,          
+	date       date,
+	);
+< 2016-10-25 20:31:21.863 CDT > ERROR:  table "weather" does not exist
+< 2016-10-25 20:31:21.863 CDT > STATEMENT:  DROP TABLE weather
+	;
+< 2016-10-25 20:38:41.420 CDT > ERROR:  column "temp_hi" of relation "weather" does not exist at character 34
+< 2016-10-25 20:38:41.420 CDT > STATEMENT:  INSERT INTO weather (date, city, temp_hi, temp_lo)
+	VALUES ('1994-11-29', 'Hayward', 54, 37);
+< 2016-10-25 20:42:06.655 CDT > ERROR:  syntax error at or near "SELECT" at character 10
+< 2016-10-25 20:42:06.655 CDT > STATEMENT:  SELECT *
+	SELECT * from *
+	;
+< 2016-10-25 20:42:13.508 CDT > ERROR:  SELECT * with no tables specified is not valid at character 8
+< 2016-10-25 20:42:13.508 CDT > STATEMENT:  SELECT *;
+< 2016-10-25 20:42:20.932 CDT > ERROR:  syntax error at or near "*" at character 15
+< 2016-10-25 20:42:20.932 CDT > STATEMENT:  SELECT * FROM *;
+< 2016-10-25 21:14:13.017 CDT > ERROR:  missing FROM-clause entry for table "city" at character 65
+< 2016-10-25 21:14:13.017 CDT > STATEMENT:  SELECT * FROM weather LEFT OUTER JOIN cities ON (weather.city = city.name);
+< 2016-10-25 21:24:32.635 CDT > ERROR:  relation "w" does not exist at character 26
+< 2016-10-25 21:24:32.635 CDT > STATEMENT:  SELECT max(temp_lo) FROM w;
+< 2016-10-25 21:24:58.100 CDT > ERROR:  column "ciity" does not exist at character 8
+< 2016-10-25 21:24:58.100 CDT > HINT:  Perhaps you meant to reference the column "weather.city".
+< 2016-10-25 21:24:58.100 CDT > STATEMENT:  SELECT ciity FROM weather WHERE temp_lo = max(temp_lo);
+< 2016-10-25 21:25:07.339 CDT > ERROR:  aggregate functions are not allowed in WHERE at character 42
+< 2016-10-25 21:25:07.339 CDT > STATEMENT:  SELECT city FROM weather WHERE temp_lo = max(temp_lo);
+< 2016-10-25 21:25:43.567 CDT > ERROR:  relation "temp_lo" does not exist at character 68
+< 2016-10-25 21:25:43.567 CDT > STATEMENT:  SELECT city FROM weather WHERE temp_lo = (SELECT max(temp_lo) FROM temp_lo);
+< 2016-10-25 21:37:15.466 CDT > ERROR:  relation "cities" already exists
+< 2016-10-25 21:37:15.466 CDT > STATEMENT:  CREATE TABLE cities (
+	city varchar(80) primary key,
+	location point);
+< 2016-10-25 21:37:26.150 CDT > ERROR:  syntax error at or near "cities" at character 8
+< 2016-10-25 21:37:26.150 CDT > STATEMENT:  DELETE cities;
+< 2016-10-25 21:37:38.504 CDT > ERROR:  syntax error at or near "*" at character 8
+< 2016-10-25 21:37:38.504 CDT > STATEMENT:  DELETE * FROM cities;
+< 2016-10-25 21:38:05.031 CDT > ERROR:  relation "cities" already exists
+< 2016-10-25 21:38:05.031 CDT > STATEMENT:  CREATE TABLE cities (
+	city varchar(80) primary key,
+	location point);
+< 2016-10-25 21:38:15.765 CDT > ERROR:  syntax error at or near "cities" at character 8
+< 2016-10-25 21:38:15.765 CDT > STATEMENT:  DELETE cities;
+< 2016-10-25 21:38:26.277 CDT > ERROR:  syntax error at or near "TABLE" at character 8
+< 2016-10-25 21:38:26.277 CDT > STATEMENT:  DELETE TABLE cities;
+< 2016-10-25 21:39:19.492 CDT > ERROR:  syntax error at or near ";" at character 9
+< 2016-10-25 21:39:19.492 CDT > STATEMENT:  DISCARD
+	;
+< 2016-10-25 21:40:58.370 CDT > ERROR:  syntax error at or near "cities" at character 17
+< 2016-10-25 21:40:58.370 CDT > STATEMENT:  DROP TABLE name cities;
+< 2016-10-25 21:41:04.424 CDT > ERROR:  cannot drop table cities because other objects depend on it
+< 2016-10-25 21:41:04.424 CDT > DETAIL:  view myview depends on table cities
+< 2016-10-25 21:41:04.424 CDT > HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+< 2016-10-25 21:41:04.424 CDT > STATEMENT:  DROP TABLE cities;
+< 2016-10-25 21:43:40.991 CDT > ERROR:  syntax error at or near "temp_lo" at character 65
+< 2016-10-25 21:43:40.991 CDT > STATEMENT:  CREATE TABLE weather (
+	city varchar(80) references cities(city)
+	temp_lo int,
+	temp_hi int,
+	prcp real,
+	date date);
+< 2016-10-25 21:43:54.363 CDT > ERROR:  relation "weather" already exists
+< 2016-10-25 21:43:54.363 CDT > STATEMENT:  CREATE TABLE weather (
+	city varchar(80) references cities(city),
+	temp_lo int,
+	temp_hi int,
+	prcp real,
+	date date);
+< 2016-10-25 21:44:58.260 CDT > ERROR:  insert or update on table "weather" violates foreign key constraint "weather_city_fkey"
+< 2016-10-25 21:44:58.260 CDT > DETAIL:  Key (city)=(Berkeley) is not present in table "cities".
+< 2016-10-25 21:44:58.260 CDT > STATEMENT:  INSERT INTO weather VALUES ('Berkeley', 45, 53, 0.0, '1994-11-28');

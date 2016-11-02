@@ -1,0 +1,4 @@
+< 2016-10-31 22:00:03.703 CDT > LOG:  received smart shutdown request
+< 2016-10-31 22:00:03.703 CDT > LOG:  autovacuum launcher shutting down
+< 2016-10-31 22:00:03.706 CDT > LOG:  shutting down
+< 2016-10-31 22:00:03.969 CDT > LOG:  database system is shut down
