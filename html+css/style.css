@@ -24,6 +24,10 @@ h1 {
 	font-size: 2em;
 }
 
+code { 
+	font-size: 90%;
+}
+
 strong {
 	font-style: bold;
 	font-variant: small-caps;
